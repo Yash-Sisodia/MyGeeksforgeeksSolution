@@ -1,0 +1,22 @@
+# MyGeeksforgeeksSolution
+class Compute 
+{
+    static pair getMinMax(long arr[], long n)  
+    {
+        //Write your code here
+        
+        long max = arr[0];
+        long min = arr[0];
+        
+        for(int j = 0; j<arr.length-1; j++) {
+            if(max<arr[j+1]) {
+                max = arr[j+1];
+            }
+            if(min>arr[j+1]) {
+                min = arr[j+1];
+            }
+        }
+        pair p = new pair(min,max);
+        return p;
+    }
+}
